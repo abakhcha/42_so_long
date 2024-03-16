@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:15:22 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/10 12:19:16 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 22:34:21 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,32 @@ int	epc(char **str)
 	}
 	if (element.e != 1 || element.p != 1 || element.c < 1)
 		return (-1);
+	return (1);
+}
+
+int	epc1(char **str)
+{
+	int			i;
+	int			j;
+	char		c;
+	t_elements	element;
+
+	element.e = 0;
+	element.p = 0;
+	element.c = 0;
+	i = 0;
+	while (str[i])
+	{
+		j = 0;
+		while (str[i][j])
+		{
+			c = str[i][j];
+			if (c != '1' && c != '0' && c != 'E')
+				return (-1);
+			j++;
+		}
+		i++;
+	}
 	return (1);
 }
 

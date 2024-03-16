@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:49:21 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 12:38:58 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 22:33:43 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int				epc(char **str);
 int				epc2(char **str);
 void			error_print(char *str);
 int				check_empty_line(char *str);
-char			**map_to_str(int fd);
+char			**map_to_doublepointer(int fd);
 void			chaeckmap(char **av, char **map);
 void			flodfil(char **map, int x, int y);
 void			freedoubleptr(char **map);
@@ -89,3 +89,5 @@ int				collectib(char **map);
 void			printstrnum(char *str, int x);
 void			theexit(t_mlx *mlx);
 char			*ft_strdup(const char *s);
+int				epc1(char **str);
+void			flodfi(char **map2, int x, int y);

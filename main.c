@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:49:46 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 12:37:53 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 22:35:42 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int	main(int ac, char **av)
 	int			fd;
 	char		**map;
 	char		**mapcpy;
+	char		**map2;
 	t_player	player;
 	t_mlx		mlx;
 
@@ -66,15 +67,19 @@ int	main(int ac, char **av)
 	fd = open(av[1], O_RDWR);
 	if (fd == -1 || !fd)
 		error_print("can not open the file");
-	map = map_to_str(fd);
+	map = map_to_doublepointer(fd);
 	mlx.map = map;
 	mapcpy = doublepointercopy(map);
+	map2 = doublepointercopy(map);
 	chaeckmap(av, map);
 	player.x = xposition(map);
 	player.y = yposition(map);
 	mlx.player = &player;
+	flodfi(map2, player.x, player.y);
 	flodfil(mapcpy, player.x, player.y);
 	if (epc2(mapcpy) == -1)
+		error_print("player can not reach one ore more than element\n");
+	if (epc1(map2) == -1)
 		error_print("player can not reach one ore more than element\n");
 	player.m = 1;
 	ft_putmap(map, &mlx);

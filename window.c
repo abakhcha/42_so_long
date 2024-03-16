@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:44:03 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/15 14:28:26 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 21:56:01 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_lodcharac_image(t_mlx *mlx, int *l, int *j)
 	charac.relative_path = "img/charac.xpm";
 	charac.img = mlx_xpm_file_to_image(mlx->mlx, charac.relative_path,
 			&charac.img_width, &charac.img_height);
+	if (!charac.img || !charac.relative_path)
+		error_print("image problem !!\n");
 	mlx_put_image_to_window(mlx->mlx, mlx->win, charac.img, *l, *j);
 }
 

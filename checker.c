@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/10 14:17:21 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 22:32:53 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	error_print(char *str)
 	exit(1);
 }
 
-char	**map_to_str(int fd)
+char	**map_to_doublepointer(int fd)
 {
 	char	*s1;
 	char	*l;
@@ -46,6 +46,8 @@ char	**map_to_str(int fd)
 	int		i;
 
 	l = get_next_line(fd);
+	if (l == NULL)
+		error_print("empty file \n");
 	s1 = ft_calloc(1, 1);
 	while (l != NULL)
 	{
