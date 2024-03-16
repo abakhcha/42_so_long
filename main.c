@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:49:46 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/15 14:08:39 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 12:37:53 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	**doublepointercopy(char **map)
 	i = 0;
 	while (map[i])
 	{
-		test[i] = strdup(map[i]);
+		test[i] = ft_strdup(map[i]);
 		i++;
 	}
 	test[i] = 0;

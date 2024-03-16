@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:49:21 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/15 15:04:24 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/16 12:38:58 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,3 +88,4 @@ int				destroy(t_mlx *mlx);
 int				collectib(char **map);
 void			printstrnum(char *str, int x);
 void			theexit(t_mlx *mlx);
+char			*ft_strdup(const char *s);
