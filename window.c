@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:44:03 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 15:45:00 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 16:13:09 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lodcharac_image(t_mlx *mlx, int *l, int *j)
 	charac.img = mlx_xpm_file_to_image(mlx->mlx, charac.relative_path,
 			&charac.img_width, &charac.img_height);
 	if (!charac.img || !charac.relative_path)
-		error_print("image problem !!\n");
+		error_print("Error\nimage problem !!\n");
 	mlx_put_image_to_window(mlx->mlx, mlx->win, charac.img, *l, *j);
 }
 
@@ -59,7 +59,7 @@ int	keys(int key, t_mlx *mlx)
 
 	i = 0;
 	if (key == 53)
-		exit(1);
+		destroy(mlx);
 	else if (key == 126 || key == 13)
 		move_up(mlx);
 	else if (key == 1 || key == 125)

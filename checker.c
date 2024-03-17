@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 15:55:59 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 16:15:20 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	**map_to_doublepointer(int fd)
 
 	l = get_next_line(fd);
 	if (l == NULL)
-		error_print("empty file \n");
+		error_print("Error\nempty file \n");
 	s1 = ft_calloc(1, 1);
 	while (l != NULL)
 	{
@@ -57,7 +57,7 @@ char	**map_to_doublepointer(int fd)
 	}
 	i = check_empty_line(s1);
 	if (i == -1)
-		error_print("empty line \n");
+		error_print("Error\nempty line \n");
 	map = ft_split(s1, '\n');
 	free(s1);
 	return (map);
@@ -66,13 +66,13 @@ char	**map_to_doublepointer(int fd)
 void	chaeckmap(char **av, char **map)
 {
 	if (!map || map[0] == '\0')
-		error_print("error !!");
+		error_print("error !!\n");
 	if (av[1][0] == 0)
-		error_print("empty map name\n");
+		error_print("Error\nempty map name\n");
 	if (checkmostatil(map) == -1)
-		error_print("your map must be rectangular\n");
+		error_print("Error\nyour map must be rectangular\n");
 	if (checkwalls2(map) == -1 || checkwalls(map) == -1)
-		error_print("The map must be closed/surrounded by walls\n");
+		error_print("Error\nThe map must be closed/surrounded by walls\n");
 	if (epc(map) == -1)
-		error_print("your map must contain ,1P,1E , atleast 1C , n1 and n0\n");
+		error_print("Error\none if the elements is m,is missing !\n");
 }

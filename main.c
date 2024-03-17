@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:49:46 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 13:03:16 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 16:04:11 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	freedoubleptr(char **map)
 void	checkkk(int ac, char **av)
 {
 	if (ac >= 3)
-		error_print("you have more than 1 argument\n");
+		error_print("Error\nyou have more than 1 argument\n");
 	if (ac != 2)
-		error_print("empty argument\n");
+		error_print("Error\nempty argument\n");
 	if (checkextention(av) == -1)
-		error_print("extention error\n");
+		error_print("Error\nverify extention \n");
 }
 
 char	**doublepointercopy(char **map)
@@ -67,7 +67,7 @@ int	main(int ac, char **av)
 	checkkk(ac, av);
 	fd = open(av[1], O_RDWR);
 	if (fd == -1 || !fd)
-		error_print("can not open the file");
+		error_print("Error\ncan not open the file");
 	map = map_to_doublepointer(fd);
 	mlx.map = map;
 	mapcpy = doublepointercopy(map);
