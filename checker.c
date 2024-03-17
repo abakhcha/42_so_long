@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 13:17:43 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 15:55:59 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,10 @@ void	chaeckmap(char **av, char **map)
 		error_print("error !!");
 	if (av[1][0] == 0)
 		error_print("empty map name\n");
+	if (checkmostatil(map) == -1)
+		error_print("your map must be rectangular\n");
 	if (checkwalls2(map) == -1 || checkwalls(map) == -1)
 		error_print("The map must be closed/surrounded by walls\n");
 	if (epc(map) == -1)
 		error_print("your map must contain ,1P,1E , atleast 1C , n1 and n0\n");
-	if (checkmostatil(map) == -1)
-		error_print("your map must be rectangular\n");
 }

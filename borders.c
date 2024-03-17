@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:05:23 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/10 12:07:47 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 15:53:06 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	checkmostatil(char **str)
 
 	m = line_size(str);
 	l = lines_number(str);
-	if (m == -1 || m == l)
+	if (m == -1)
 		return (-1);
 	return (1);
 }
