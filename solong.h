@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:49:21 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 22:33:43 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 12:58:43 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,3 +91,5 @@ void			theexit(t_mlx *mlx);
 char			*ft_strdup(const char *s);
 int				epc1(char **str);
 void			flodfi(char **map2, int x, int y);
+void			checkacsess(char **mapcpy, char **map, t_player player);
+char			**doublepointercopy(char **map);

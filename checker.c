@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 22:32:53 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/17 13:17:43 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**map_to_doublepointer(int fd)
 	}
 	i = check_empty_line(s1);
 	if (i == -1)
-		return (NULL);
+		error_print("empty line \n");
 	map = ft_split(s1, '\n');
 	free(s1);
 	return (map);
@@ -65,8 +65,8 @@ char	**map_to_doublepointer(int fd)
 
 void	chaeckmap(char **av, char **map)
 {
-	if (!map || map[0] == 0)
-		error_print("you have an empty line or aslan your file was empty");
+	if (!map || map[0] == '\0')
+		error_print("error !!");
 	if (av[1][0] == 0)
 		error_print("empty map name\n");
 	if (checkwalls2(map) == -1 || checkwalls(map) == -1)
