@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:58:29 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 12:41:27 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:45 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	ft_putnbr(int n)
 {

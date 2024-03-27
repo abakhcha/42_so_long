@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:44:03 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 16:13:09 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:33 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	ft_lodcharac_image(t_mlx *mlx, int *l, int *j)
 {

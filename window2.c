@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:08:39 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 16:02:37 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:39 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	ft_loadhouse_image(void *mlx, void *win, int *l, int *j)
 {

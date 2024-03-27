@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:05:18 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 22:34:47 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:51 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	ft_putstr(char *s)
 {

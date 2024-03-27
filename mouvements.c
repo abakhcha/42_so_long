@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:08:21 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/16 14:27:54 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:08 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	move_up(t_mlx *mlx)
 {

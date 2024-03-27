@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:49:46 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 16:04:11 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:00 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 void	freedoubleptr(char **map)
 {
@@ -80,5 +80,7 @@ int	main(int ac, char **av)
 	player.m = 1;
 	ft_putmap(map, &mlx);
 	freedoubleptr(map);
+	freedoubleptr(mapcpy);
+	freedoubleptr(mlx.map);
 	return (0);
 }

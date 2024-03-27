@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solong.h                                           :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:49:21 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/17 15:01:30 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 17:23:50 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <fcntl.h>
-#include <mlx.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#ifndef SO_LONG_H
+# define SO_LONG_H
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include "get_next_line.h"
+# include <fcntl.h>
+# include <mlx.h>
 
 typedef struct img
 {
@@ -93,3 +96,5 @@ int				epc1(char **str);
 void			flodfi(char **map2, int x, int y);
 void			checkacsess(char **mapcpy, char **map, t_player player);
 char			**doublepointercopy(char **map);
+
+#endif

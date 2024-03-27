@@ -6,11 +6,11 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:22:07 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/13 13:55:28 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:49:13 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "solong.h"
+#include "so_long.h"
 
 int	yposition(char **map)
 {
