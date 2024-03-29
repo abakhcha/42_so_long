@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/27 16:48:44 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/29 23:27:11 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,5 @@ void	chaeckmap(char **av, char **map)
 	if (checkwalls2(map) == -1 || checkwalls(map) == -1)
 		error_print("Error\nThe map must be closed/surrounded by walls\n");
 	if (epc(map) == -1)
-		error_print("Error\none if the elements is m,is missing !\n");
+		error_print("Error\none of the elements is missing !\n");
 }
