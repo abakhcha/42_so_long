@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:45:38 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/27 16:49:24 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/30 02:39:34 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_substr(char *s, int start, size_t len)
 	j = 0;
 	if (!s)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start > (int)ft_strlen(s))
 		len = 0;
 	else if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
