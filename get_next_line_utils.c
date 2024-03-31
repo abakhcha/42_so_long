@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 09:27:26 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/08 19:12:16 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/30 02:46:23 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*str_join(char *s1, char *s2)
 	j = 0;
 	if (!s1 && !s2)
 		return (NULL);
-	str = malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
+	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
 	while (s1[i])
@@ -73,7 +73,7 @@ char	*str_join(char *s1, char *s2)
 	while (s2[i])
 		str[j++] = s2[i++];
 	str[j] = '\0';
-	free((char *)s1);
+	free(s1);
 	return (str);
 }
 

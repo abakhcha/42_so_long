@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:44:03 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/29 22:48:05 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/30 02:49:54 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lodcharac_image(t_mlx *mlx, int *l, int *j)
 {
 	t_image	charac;
 
-	charac.relative_path = "img/charac.xpm";
+	charac.relative_path = "textures/charac.xpm";
 	charac.img = mlx_xpm_file_to_image(mlx->mlx, charac.relative_path,
 			&charac.img_width, &charac.img_height);
 	if (!charac.img || !charac.relative_path)

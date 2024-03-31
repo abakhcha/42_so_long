@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:08:39 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/27 16:49:39 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/30 02:49:44 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_loadhouse_image(void *mlx, void *win, int *l, int *j)
 {
 	t_image	house;
 
-	house.relative_path = "img/house.xpm";
+	house.relative_path = "textures/house.xpm";
 	house.img = mlx_xpm_file_to_image(mlx, house.relative_path,
 			&house.img_width, &house.img_height);
 	if (!house.img || !house.relative_path)
@@ -28,7 +28,7 @@ void	ft_lodwalls_image(void *mlx, void *win, int *l, int *j)
 {
 	t_image	walls;
 
-	walls.relative_path = "img/walls.xpm";
+	walls.relative_path = "textures/walls.xpm";
 	walls.img = mlx_xpm_file_to_image(mlx, walls.relative_path,
 			&walls.img_width, &walls.img_height);
 	if (!walls.img || !walls.relative_path)
@@ -40,7 +40,7 @@ void	ft_lodcollect_image(void *mlx, void *win, int *l, int *j)
 {
 	t_image	collect;
 
-	collect.relative_path = "img/collect.xpm";
+	collect.relative_path = "textures/collect.xpm";
 	collect.img = mlx_xpm_file_to_image(mlx, collect.relative_path,
 			&collect.img_width, &collect.img_height);
 	if (!collect.img || !collect.relative_path)
@@ -52,7 +52,7 @@ void	ft_lodlard_image(t_mlx *mlx, int *l, int *j)
 {
 	t_image	lard;
 
-	lard.relative_path = "img/lard.xpm";
+	lard.relative_path = "textures/lard.xpm";
 	lard.img = mlx_xpm_file_to_image(mlx->mlx, lard.relative_path,
 			&lard.img_width, &lard.img_height);
 	if (!lard.img || !lard.relative_path)
