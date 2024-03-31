@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:05:18 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/30 23:09:55 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/31 13:23:56 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_strdup(const char *s)
 void	flodfi(char **map, int x, int y)
 {
 	if ((map[x][y] && map[x][y] == '1') || map[x][y] == 'E'
-		|| y > line_size(map) || x > lines_number(map))
+		|| y > line_size(map) || x > lines_number(map) || y < 0 || x < 0)
 		return ;
 	map[x][y] = '1';
 	flodfi(map, x, y + 1);

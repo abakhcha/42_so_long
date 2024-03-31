@@ -6,7 +6,7 @@
 /*   By: abakhcha <abakhcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 12:26:27 by abakhcha          #+#    #+#             */
-/*   Updated: 2024/03/29 23:27:11 by abakhcha         ###   ########.fr       */
+/*   Updated: 2024/03/31 14:17:03 by abakhcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,15 @@ char	**map_to_doublepointer(int fd)
 
 void	chaeckmap(char **av, char **map)
 {
+	
 	if (!map || map[0] == '\0')
 		error_print("error !!\n");
+	if (epc(map) == -1)
+		error_print("Error\ncheck elemnts!\n");
 	if (av[1][0] == 0)
 		error_print("Error\nempty map name\n");
 	if (checkmostatil(map) == -1)
 		error_print("Error\nyour map must be rectangular\n");
 	if (checkwalls2(map) == -1 || checkwalls(map) == -1)
 		error_print("Error\nThe map must be closed/surrounded by walls\n");
-	if (epc(map) == -1)
-		error_print("Error\none of the elements is missing !\n");
 }

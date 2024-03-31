@@ -6,7 +6,7 @@ SRC =	borders.c checker.c elements.c get_next_line_utils.c\
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -fsanitize=address -g3 -Wall -Wextra -Werror
 
 OBJS = $(SRC:.c=.o)
 
